@@ -54,5 +54,8 @@
       "enabled": false
     }
   ],
-  "forkProcessing": "enabled"
+  "forkProcessing": "enabled",
+  "assignees": [
+    "clain23"
+  ]
 }
