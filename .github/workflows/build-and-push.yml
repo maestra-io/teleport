@@ -51,7 +51,7 @@ jobs:
       DOCKER_BUILDKIT: 1
     steps:
       - uses: runs-on/action@17b59092eb37ebfdbb034460892887c09100eaa3  # v2.5.0
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with:
           persist-credentials: false
 
@@ -115,14 +115,14 @@ jobs:
 
       - name: Cache Teleport binaries
         if: github.event_name != 'pull_request'
-        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9  # v6
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9  # v6.1.0
         with:
           path: ${{ runner.tool_cache }}/teleport
           key: teleport-${{ steps.tp-version.outputs.version }}-${{ runner.os }}-${{ runner.arch }}
 
       - name: Install Teleport
         if: github.event_name != 'pull_request'
-        uses: teleport-actions/setup@10b5e9f760190f027a1e04e342178d8d6e7eae30  # v2
+        uses: teleport-actions/setup@10b5e9f760190f027a1e04e342178d8d6e7eae30  # v2.0.0
         with:
           version: ${{ steps.tp-version.outputs.version }}
           proxy: ${{ env.TELEPORT_FQDN }}
