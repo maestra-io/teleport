@@ -5,7 +5,8 @@
     "config:recommended",
     ":disableDependencyDashboard",
     ":semanticCommitsDisabled",
-    "helpers:pinGitHubActionDigests"
+    "helpers:pinGitHubActionDigests",
+    "github>maestra-io/renovate-config:externalImages"
   ],
   "labels": [
     "dependencies"
