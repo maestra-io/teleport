@@ -40,6 +40,9 @@ packageExtensions:
   storybook@10:
     peerDependencies:
       '@storybook/react-vite': '*'
+# oxfmt pins tinypool 2.1.0 exactly (GHSA fixed in 2.1.2); force the patched release.
+overrides:
+  'oxfmt>tinypool': 2.1.2
 # shellEmulator enables cross-platform scripting, allowing POSIX-style shell variables to work on Windows.
 shellEmulator: true
 # packageImportMethod avoids an issue building the web UI in docker on mac. It does not seem to
